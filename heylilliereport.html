@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hey Lilie ICP Final Report 2025–2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --purple: #7B2FC9;
+    --purple-light: #F0E6FA;
+    --purple-dark: #4A1A7A;
+    --red-em: #D0021B;
+    --gray-50: #F9F8F6;
+    --gray-100: #F0EEE9;
+    --gray-200: #DDD9D0;
+    --gray-400: #9C9890;
+    --gray-600: #5C5852;
+    --gray-900: #1A1917;
+    --text: #1A1917;
+    --text-muted: #5C5852;
+    --border: #E2DED6;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--text);
+    background: #fff;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .cover {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 64px 72px 56px;
+    border-bottom: 3px solid var(--purple);
+    background: #fff;
+  }
+  .cover-logos { display: flex; align-items: center; gap: 32px; }
+  .logo-hl {
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--purple);
+    letter-spacing: -2px;
+    line-height: 1;
+  }
+  .logo-em {
+    background: var(--red-em);
+    color: #fff;
+    padding: 10px 16px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+    border-radius: 2px;
+  }
+  .cover-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 80px 0 40px; }
+  .cover-tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--purple);
+    margin-bottom: 20px;
+  }
+  .cover-title {
+    font-size: 44px;
+    font-weight: 700;
+    color: var(--gray-900);
+    line-height: 1.15;
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+  }
+  .cover-subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-muted);
+    max-width: 560px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+  }
+  .cover-question {
+    background: var(--purple-light);
+    border-left: 4px solid var(--purple);
+    padding: 20px 24px;
+    border-radius: 0 8px 8px 0;
+    font-size: 16px;
+    font-style: italic;
+    color: var(--purple-dark);
+    max-width: 640px;
+    line-height: 1.6;
+  }
+  .cover-footer { display: flex; justify-content: space-between; align-items: flex-end; }
+  .cover-team { font-size: 13px; color: var(--text-muted); }
+  .cover-team strong { display: block; font-weight: 600; color: var(--text); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+  .cover-year { font-size: 13px; color: var(--text-muted); text-align: right; }
+
+  .page { padding: 72px 72px 64px; border-bottom: 1px solid var(--border); }
+  .page:last-child { border-bottom: none; }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--purple);
+    margin-bottom: 12px;
+  }
+
+  h1 { font-size: 34px; font-weight: 700; letter-spacing: -0.5px; line-height: 1.2; color: var(--gray-900); margin-bottom: 24px; }
+  h2 { font-size: 22px; font-weight: 700; color: var(--gray-900); margin: 48px 0 16px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+  h2:first-of-type { margin-top: 0; }
+  h3 { font-size: 16px; font-weight: 600; color: var(--gray-900); margin: 32px 0 10px; }
+  h4 { font-size: 14px; font-weight: 600; color: var(--purple); text-transform: uppercase; letter-spacing: 0.5px; margin: 24px 0 8px; }
+
+  p { margin-bottom: 16px; color: var(--text); }
+  p:last-child { margin-bottom: 0; }
+
+  .exec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 32px 0; }
+  .exec-card {
+    background: var(--gray-50);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+  }
+  .exec-card.full { grid-column: 1 / -1; }
+  .exec-card h4 { margin: 0 0 8px; }
+  .exec-card p { font-size: 14px; line-height: 1.65; margin: 0; }
+  .exec-card.accent {
+    background: var(--purple-light);
+    border-color: var(--purple);
+  }
+  .exec-card.accent h4 { color: var(--purple-dark); }
+
+  .finding {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 16px 20px;
+    border-radius: 8px;
+    background: var(--gray-50);
+    border: 1px solid var(--border);
+    margin-bottom: 12px;
+  }
+  .finding-num {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--purple);
+    background: var(--purple-light);
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .finding p { font-size: 14px; line-height: 1.6; margin: 0; }
+
+  .limit-card {
+    border-left: 3px solid var(--purple);
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    background: var(--gray-50);
+  }
+  .limit-card h3 { margin: 0 0 8px; font-size: 15px; }
+  .limit-card p { font-size: 14px; margin: 0; }
+
+  .mvp-notice {
+    background: #FFF8E6;
+    border: 1px solid #F0C040;
+    border-radius: 8px;
+    padding: 16px 20px;
+    font-size: 13px;
+    color: #7A5C00;
+    margin-bottom: 32px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .mvp-notice-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+
+  .screenshot-block { margin: 32px 0; }
+  .screenshot-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+  }
+  .screenshot-mock {
+    background: #1A1210;
+    border-radius: 10px;
+    padding: 28px 24px;
+    font-family: monospace;
+    color: #C8B8B8;
+    font-size: 13px;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .mock-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #333;
+  }
+  .mock-logo { color: var(--purple); font-size: 15px; font-weight: 700; }
+  .mock-tag { font-size: 10px; color: #888; letter-spacing: 1px; }
+  .mock-badge { background: #2A1F2A; color: #B09AB0; font-size: 11px; padding: 2px 8px; border-radius: 10px; }
+  .mock-row { display: flex; align-items: center; gap: 12px; margin: 6px 0; }
+  .mock-label { font-size: 12px; color: #888; width: 120px; }
+  .mock-select {
+    background: #2A2220;
+    border: 1px solid #444;
+    color: #C8B8B8;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    flex: 1;
+  }
+  .mock-btn {
+    background: var(--purple);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin-top: 12px;
+    cursor: default;
+    display: inline-block;
+  }
+  .insight-box {
+    background: var(--gray-50);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 16px 0 24px;
+  }
+  .insight-box h4 { margin: 0 0 8px; }
+  .insight-box p { font-size: 14px; margin: 0; }
+  .obs-list { list-style: none; padding: 0; margin: 10px 0 0; }
+  .obs-list li {
+    font-size: 14px;
+    padding: 6px 0 6px 20px;
+    position: relative;
+    color: var(--text);
+    border-bottom: 1px solid var(--border);
+  }
+  .obs-list li:last-child { border-bottom: none; }
+  .obs-list li::before { content: '→'; position: absolute; left: 0; color: var(--purple); font-size: 13px; }
+
+  .competitor-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+  }
+  .competitor-card h3 { margin: 0 0 6px; font-size: 15px; color: var(--gray-900); }
+  .competitor-card p { font-size: 14px; margin: 0 0 10px; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.3px;
+  }
+  .tag-purple { background: var(--purple-light); color: var(--purple-dark); }
+  .tag-gray { background: var(--gray-100); color: var(--gray-600); }
+  .tag-amber { background: #FFF3DC; color: #7A5000; }
+
+  .matrix { width: 100%; border-collapse: collapse; font-size: 13px; margin: 20px 0; }
+  .matrix th { background: var(--gray-100); color: var(--text-muted); font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 10px 14px; text-align: left; border-bottom: 2px solid var(--border); }
+  .matrix td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .matrix tr:last-child td { border-bottom: none; }
+  .matrix tr:nth-child(even) td { background: var(--gray-50); }
+
+  .rec-block {
+    background: var(--purple-light);
+    border: 1.5px solid var(--purple);
+    border-radius: 10px;
+    padding: 28px 32px;
+    margin: 32px 0;
+  }
+  .rec-block h3 { color: var(--purple-dark); margin: 0 0 12px; font-size: 17px; }
+  .rec-block p { font-size: 15px; line-height: 1.7; margin-bottom: 12px; }
+  .rec-block p:last-child { margin-bottom: 0; }
+
+  .horizon-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin: 24px 0; }
+  .horizon-card {
+    background: var(--gray-50);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px;
+  }
+  .horizon-card .h-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--purple);
+    margin-bottom: 6px;
+  }
+  .horizon-card h3 { margin: 0 0 8px; font-size: 14px; }
+  .horizon-card p { font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6; }
+
+  .glossary-entry { margin-bottom: 20px; display: flex; gap: 20px; }
+  .gloss-term {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--purple-dark);
+    min-width: 140px;
+    padding-top: 2px;
+  }
+  .gloss-def { font-size: 14px; color: var(--text); line-height: 1.6; }
+
+  .ref-item {
+    font-size: 13px;
+    color: var(--text-muted);
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    line-height: 1.6;
+  }
+  .ref-item:last-child { border-bottom: none; }
+  .ref-num { font-weight: 700; color: var(--purple); margin-right: 8px; }
+
+  .pull-quote {
+    font-size: 19px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--purple-dark);
+    border-left: 3px solid var(--purple);
+    padding: 12px 24px;
+    margin: 32px 0;
+    line-height: 1.6;
+  }
+
+  hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+
+  .toc-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 8px 0;
+    border-bottom: 1px dotted var(--border);
+    font-size: 14px;
+  }
+  .toc-item:last-child { border-bottom: none; }
+  .toc-num { color: var(--purple); font-weight: 600; margin-right: 12px; }
+  .toc-title { flex: 1; }
+  .toc-section { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-muted); margin: 20px 0 8px; }
+
+  .dash-mock {
+    background: #0D0A0A;
+    border-radius: 10px;
+    padding: 20px;
+    color: #C8B8B8;
+    font-family: monospace;
+    font-size: 13px;
+  }
+  .dash-kpi { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px; }
+  .kpi-box {
+    background: #1F1515;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 14px;
+    text-align: center;
+  }
+  .kpi-num { font-size: 28px; font-weight: 700; color: var(--purple); }
+  .kpi-label { font-size: 10px; color: #888; letter-spacing: 1px; text-transform: uppercase; margin-top: 4px; }
+  .dash-charts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .chart-box {
+    background: #1F1515;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 14px;
+  }
+  .chart-title { font-size: 10px; color: #888; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+  .bar-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+  .bar-lbl { font-size: 11px; color: #888; width: 60px; text-align: right; }
+  .bar-bg { flex: 1; background: #2A2020; border-radius: 2px; height: 10px; overflow: hidden; }
+  .bar-fill { height: 100%; background: var(--purple); border-radius: 2px; }
+  .bar-val { font-size: 11px; color: #888; width: 28px; }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-logos">
+    <div class="logo-hl">hey<br>lilie</div>
+    <div style="width: 1px; height: 56px; background: var(--border);"></div>
+    <div class="logo-em">em<br>lyon<br>business<br>school</div>
+  </div>
+
+  <div class="cover-body">
+    <div class="cover-tag">ICP Final Report · 2025–2026</div>
+    <div class="cover-title">Designing a Standardized<br>Clinical Data Capture System<br>for Women's Health</div>
+    <div class="cover-subtitle">Can Hey Lilie's trained practitioner network become a structured clinical data asset?</div>
+    <div class="cover-question">
+      "Can Hey Lilie turn its trained practitioner base into a structured clinical data asset and if so, what is the minimum viable product to prove it?"
+    </div>
+  </div>
+
+  <div class="cover-footer">
+    <div class="cover-team">
+      <strong>Presented by</strong>
+      Lucas Damour · Loriane Chalach · Yuliia Hushcha<br>
+      Joshi Phalguni · Greeshma Sai Koushika Gara
+    </div>
+    <div class="cover-year">
+      emlyon business school<br>
+      Academic Year 2025–2026
+    </div>
+  </div>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<div class="page">
+  <div class="section-label">Contents</div>
+  <h1 style="font-size: 28px; margin-bottom: 32px;">Table of Contents</h1>
+
+  <div class="toc-section">Framing</div>
+  <div class="toc-item"><span><span class="toc-num">01</span><span class="toc-title">Executive Summary</span></span></div>
+  <div class="toc-item"><span><span class="toc-num">02</span><span class="toc-title">Company Introduction Hey Lilie</span></span></div>
+  <div class="toc-item"><span><span class="toc-num">03</span><span class="toc-title">Understanding the Challenge</span></span></div>
+  <div class="toc-item"><span><span class="toc-num">04</span><span class="toc-title">Scope of the Project</span></span></div>
+  <div class="toc-item"><span><span class="toc-num">05</span><span class="toc-title">Key Limitations and Constraints</span></span></div>
+
+  <div class="toc-section">Analysis</div>
+  <div class="toc-item"><span><span class="toc-num">06</span><span class="toc-title">Competitive Landscape & Market Dynamics</span></span></div>
+  <div class="toc-item"><span><span class="toc-num">07</span><span class="toc-title">Regulatory Environment & GDPR Constraints</span></span></div>
+
+  <div class="toc-section">Prototype Exploration</div>
+  <div class="toc-item"><span><span class="toc-num">08</span><span class="toc-title">MVP Concept: Workflow & Design Insights</span></span></div>
+
+  <div class="toc-section">Strategic Output</div>
+  <div class="toc-item"><span><span class="toc-num">09</span><span class="toc-title">Strategic Recommendation</span></span></div>
+  <div class="toc-item"><span><span class="toc-num">10</span><span class="toc-title">Conclusion</span></span></div>
+  <div class="toc-item"><span><span class="toc-num">11</span><span class="toc-title">Glossary</span></span></div>
+  <div class="toc-item"><span><span class="toc-num">12</span><span class="toc-title">References</span></span></div>
+</div>
+
+<!-- 01 EXECUTIVE SUMMARY -->
+<div class="page">
+  <div class="section-label">01 · Executive Summary</div>
+  <h1>Executive Summary</h1>
+
+  <div class="exec-grid">
+    <div class="exec-card">
+      <h4>Context</h4>
+      <p>Hey Lilie is a Qualiopi-certified continuing education provider founded in 2023, focused on women's pelvic health in France. With over 400 trained practitioners and 15 clinical instructors, the company sits at the crossroads of clinical practice and professional education.</p>
+    </div>
+    <div class="exec-card">
+      <h4>Problem</h4>
+      <p>Currently, clinical data generated during women’s health consultations remains fragmented and unstructured. Indeed, the existing workflows for physiotherapists and midwives are not designed for standardized capture which leads almost automatically to an inconsistent documentation and a lack of reusable insights. 
+The absence of a common data model makes it impossible to compare results or track patient progress over time. This lack of structure compromises both the quality of care and the strategic development of the organization.</p>
+    </div>
+    <div class="exec-card">
+      <h4>Project Objective</h4>
+      <p>In order to differentiate from competitors who are increasingly leveraging structured data ecosystems, Hey Lilie must transition from a pure training provider to a clinical data infrastructure platform. For example, the idea could be the creation of an MVP that enables standardized, seamless data capture directly embedded within existing clinical workflows.</p>
+    </div>
+    <div class="exec-card">
+      <h4>Methodology</h4>
+      <p>The success of this transformation depends on the integration of three critical factors : clinical usability for the practitioner, data standardization for research, and strict regulatory compliance. Indeed, handling such sensitive health data under the GDPR framework requires specialized expertise in consent management and secure storage. Thus, by addressing these complexities now, Hey Lilie will be able to set the foundation for a scalable and data-driven ecosystem that will sustainably transform women’s healthcare in France. </p>
+    </div>
+    <div class="exec-card full accent">
+      <h4>Main Findings</h4>
+      <p>Three things stood out. First, there's no shared data model across pelvic health practitioners a gap that neither consumer femtech nor academic institutions have addressed. Second, structured clinical data collection is legally viable but requires careful governance from day one: GDPR compliance, privacy-by-design, and practitioner trust are non-negotiable. Third, workflow friction is the biggest adoption risk. Any tool that adds documentation burden without giving practitioners something back will fail, regardless of its long-term value.</p>
+    </div>
+    <div class="exec-card">
+      <h4>Strategic Implications</h4>
+      <p>Hey Lilie's long-term edge isn't training content it's the clinical knowledge infrastructure it could build around its practitioner community. The shift from education provider to clinical data platform is feasible, but only with the right trust and governance foundations.</p>
+    </div>
+    <div class="exec-card">
+      <h4>Key Limitations</h4>
+      <p>No primary practitioner interviews or field observations were conducted. Workflow analyses are based on secondary research and need empirical validation. The prototype is a concept tool not a tested or deployed product, and no clinical validation has been done.</p>
+    </div>
+    <div class="exec-card full">
+      <h4>Recommendation</h4>
+      <p>Hey Lilie should take a phased, trust-first approach. The immediate priority is not building technology it's governance design and co-creation with practitioners. A validated data model, a consent framework, and a small pilot with willing practitioners should come before any broader rollout. The prototype in this report is a starting point for that conversation, not a ready-to-deploy solution.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 02 INTRODUCTION -->
+<div class="page">
+  <div class="section-label">02 · Company Introduction</div>
+  <h1>Hey Lilie</h1>
+
+  <p>Since its creation in 2023, Hey Lilie has established itself as a leading Qualiopi certified provider of continuing education in France. The company specializes in the field of women’s pelvic health. The company is born out of a simple observation: the unique aspects of women’s health have long been neglected in traditional university curricula despite advances in medicine in recent years. 
+This gap has created a void that the company tries to fill with in person training sessions (from 2 to 4 days) designed for frontline professionals such as  physiotherapists or midwives.
+Thus, by focusing on areas like endometriosis and pelvic floor health, Hey Lilie does more than teach techniques. The main goal is to redefine how practitioners approach intimate care. Their method prioritizes clinical reasoning over rigid protocols to turn complex pathologies into areas of mastery. 
+.</p>
+  <p>Their commitment to excellence has led to rapid growth, with more than 400 healthcare professionals already trained by a network of 15 expert clinical instructors.
+.</p>
+
+  <div class="pull-quote">"Hey Lilie does more than teach techniques. It's working to change how practitioners think about intimate care."</div>
+
+  <p>That approach has driven fast growth. Over 400 healthcare professionals have been trained by 15 expert clinical instructors. All programs are grounded in EBM and aligned with internationally recognized assessment frameworks the ICIQ-UI-SF, Oxford Scale, PERFECT, and POP-Q.</p>
+
+  <p>Beyond training, Hey Lilie is building broader infrastructure for women's health, including an LMS and clinical AI tools, with the long-term goal of incorporating structured real-world clinical data. That ambition is what this project is about.</p>
+
+  <h2>The Question Behind This Report</h2>
+  <p>Can the practitioner network Hey Lilie has built be turned into a structured clinical data asset? And if so, what's the minimum viable product that would let Hey Lilie start testing that in practice?</p>
+
+  <p>This isn't primarily a technology question. It's about organizational structure, regulation, and strategy. It requires understanding practitioner workflows, the French health data legal landscape, competitive dynamics in femtech and digital health, and what governance looks like for earning practitioner trust.</p>
+</div>
+
+<!-- 03 CHALLENGE -->
+<div class="page">
+  <div class="section-label">03 · Understanding the Challenge</div>
+  <h1>The Clinical Data Gap in Women's Health</h1>
+
+  <p>Women's pelvic health in France has three connected problems: not enough professional training, highly inconsistent clinical practice, and almost no structured clinical data from real-world consultations. Hey Lilie addresses the training problem directly. The other two remain largely unsolved.</p>
+
+  <h2>The Data That's Already There Just Not Captured</h2>
+  <p>Every day, practitioners trained by Hey Lilie run consultations that produce clinically meaningful data: pelvic floor assessment scores, results from validated scales like the ICIQ-UI-SF, Oxford Scale, PERFECT, and POP-Q, symptom progressions, treatment choices, patient outcomes.</p>
+
+  <p>This data exists. It's being created consultation by consultation across hundreds of practitioners in France. The problem is where it ends up: handwritten notes, unstructured PDFs, or the practitioner's memory. None of it is in a standardized format. None of it can be aggregated. None of it is reusable beyond the single session it came from.</p>
+
+  <div class="pull-quote">"This isn't a technology problem. It's a systemic gap in how clinical knowledge gets captured in women's health."</div>
+
+  <h2>Why It Matters Strategically</h2>
+  <p>There are two reasons this matters. First, patient care: without structured longitudinal data, practitioners can't systematically track progress, compare outcomes across treatments, or contribute to broader clinical research.</p>
+
+  <p>Second, strategic positioning: organizations that control structured, real-world clinical datasets will have a meaningful advantage as digital health matures in developing evidence-based tools, forming research partnerships, and building defensible data infrastructure. Hey Lilie is sitting on a latent data opportunity that loses value with every undocumented consultation.</p>
+
+  <h2>What's Missing</h2>
+  <p>The data and the network to generate it both exist. What's missing is a way to collect that clinical data at the point of care, in a structured format, GDPR-compliant, and without disrupting practitioners' workflows in a way that would kill adoption. That mechanism is what this project tries to define.</p>
+</div>
+
+<!-- 04 SCOPE -->
+<div class="page">
+  <div class="section-label">04 · Scope of the Project</div>
+  <h1>Scope & Methodology</h1>
+
+  <p>This project focuses on the discovery and definition phase of a minimum viable product for structured clinical data capture. It's strategic and conceptual not a technical deployment plan.</p>
+
+  <h2>What We Covered</h2>
+
+  <div class="finding">
+    <div class="finding-num">1</div>
+    <p><strong>Clinical workflow analysis.</strong> Mapping how pelvic health practitioners currently assess patients, document findings, and track progress to identify where structured data capture could fit without creating friction.</p>
+  </div>
+  <div class="finding">
+    <div class="finding-num">2</div>
+    <p><strong>Competitive and market landscape.</strong> How leading digital health and femtech companies are using structured clinical data, and what that means for Hey Lilie's positioning.</p>
+  </div>
+  <div class="finding">
+    <div class="finding-num">3</div>
+    <p><strong>Regulatory and compliance framework.</strong> The key GDPR and French health data requirements for collecting sensitive clinical information, and the governance principles that any data capture solution needs from the start.</p>
+  </div>
+  <div class="finding">
+    <div class="finding-num">4</div>
+    <p><strong>MVP design concept.</strong> The design principles and core functional modules of a structured data capture tool, shown through an exploratory prototype. This is a proof-of-concept for workflow reasoning not a clinically tested or deployed product.</p>
+  </div>
+
+  <h2>What We Didn't Cover</h2>
+
+  <table class="matrix" style="margin-top: 16px;">
+    <thead>
+      <tr>
+        <th>Out of scope</th>
+        <th>Why / what comes next</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Technical architecture and build</td>
+        <td>Needs engineering resources and validated requirements from field testing</td>
+      </tr>
+      <tr>
+        <td>Clinical validation studies</td>
+        <td>Requires ethics committee approval and formal study design</td>
+      </tr>
+      <tr>
+        <td>Primary practitioner interviews and field observation</td>
+        <td>Not feasible within the project timeline must come next</td>
+      </tr>
+      <tr>
+        <td>EMR/HIS integration</td>
+        <td>Requires interoperability scoping and API partnerships</td>
+      </tr>
+      <tr>
+        <td>Long-term data governance architecture</td>
+        <td>Requires legal counsel and multi-stakeholder co-design</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 05 LIMITATIONS -->
+<div class="page">
+  <div class="section-label">05 · Key Limitations & Constraints</div>
+  <h1>Limitations</h1>
+
+  <p>Any honest strategic analysis has to be upfront about what it doesn't know. This project is exploratory, and these limitations matter for reading the recommendations that follow.</p>
+
+  <div class="limit-card">
+    <h3>1 · Clinical complexity and data heterogeneity</h3>
+    <p>The project is inherently constrained by the extreme diversity of real world clinical practice. For instance, pelvic health consultations vary significantly across professions such as physiotherapists, midwives, or physicians. Each of them are using distinct clinical reasoning frameworks and documentation styles.  Thus, designing a standardized model that remains relevant for all represents a major tension : excessive standardization risks reducing clinical flexibility and discouraging adoption, while insufficient standardization undermines the goal of creating interoperable datasets.  Furthermore, since current records are predominantly unstructured (handwritten notes or PDFs), there is no robust historical dataset available for immediate benchmarking or AI-driven insights. The MVP, therefore, focuses on building future collection capabilities rather than generating immediate large-scale analytics.
+</p>
+  </div>
+
+  <div class="limit-card">
+    <h3>2 · User adoption and workflow friction</h3>
+    <p>A critical limitation concerns the administrative and cognitive burden already faced by healthcare professionals. Even if the proposed solution improves long term data quality, any increase in consultation friction may negatively impact adoption. While the project assumes that structured data capture can be embedded seamlessly, this remains a hypothesis. In practice, practitioners may resist new documentation requirements if they perceive them as time consuming or disconnected from immediate patient care. This risk is amplified by a methodological limitation : due to operational constraints, field observations and practitioner interviews could not be conducted within the project timeline. Consequently, the workflow analyses presented here should be treated as preliminary hypotheses that require further empirical validation.
+
+.</p>
+  </div>
+
+  <div class="limit-card">
+    <h3>3 ·Regulatory, ethical, and trust-based constraints</h3>
+    <p> The project is strictly bound by the European GDPR framework, as pelvic health data constitute highly sensitive personal information. This necessitates complex safeguards regarding consent management, data minimization, anonymization, and secure storage. However, regulatory compliance alone does not guarantee trust. Building a scalable infrastructure requires robust governance mechanisms to ensure transparency and ethical data use over time. Without this trust, both practitioner participation and patient consent could remain limited.
+</p>
+  </div>
+
+  <div class="limit-card">
+    <h3>4 · Technological fragmentation and scalability</h3>
+    <p>From a technical perspective, the project does not yet fully address interoperability with the fragmented French healthcare IT ecosystem. Integration with existing Electronic Medical Records (EMR) or national health platforms remains difficult due to technical incompatibilities and limited APIs. Initially, the MVP may operate as an isolated layer rather than a fully integrated ecosystem, limiting its immediate systemic impact. As a startup transitioning from education to infrastructure, Hey Lilie may struggle to quickly reach the critical mass of users needed for strong network effects and defensible AI. 
+.</p>
+  </div>
+
+  <div class="limit-card">
+    <h3>5 · Exploratory scope and future validation</h3>
+    <p>Finally, it is important to emphasize that the scope of this project is exploratory. The objective is to define the foundations of a viable MVP, not to deliver a fully operational clinical platform. Several critical dimensions remain outside the current scope, including large-scale technical deployment, clinical validation studies, and long-term governance architecture.
+ The success of this transition will depend less on the technical ability to collect data than on Hey Lilie’s capacity to foster a trusted, clinically useful ecosystem that aligns practitioner adoption with data integrity.</p>
+  </div>
+</div>
+
+<!-- 06 COMPETITIVE -->
+<div class="page">
+  <div class="section-label">06 · Competitive Landscape</div>
+  <h1>Market Dynamics & Competitive Ecosystem</h1>
+
+  <h2>A Sector in Transition</h2>
+  <p>Pelvic health has gotten significantly more attention over the past five years. Conditions like postpartum recovery, urinary incontinence, chronic pelvic pain, prolapse, and menopause-related disorders historically under-discussed are now more openly addressed in both clinical and consumer contexts. Femtech investment has followed.</p>
+
+  <p>Despite that growth, the clinical side of the market is still fragmented. Practitioners in different settings use different assessment methods, documentation styles, and treatment protocols. Technology is moving faster than clinical systems: new digital tools enter the market, but practitioner workflows haven't kept up. Access to care is improving; consistency isn't.</p>
+
+  <h2>Competitive Categories</h2>
+
+  <div class="competitor-card">
+    <h3>Consumer Device & Home Rehabilitation Platforms</h3>
+    <p>Companies like Perifit, Elvie, and Renovia have built consumer-facing pelvic health products around connected rehabilitation devices. They've made pelvic health more visible and accessible for patients. They generate engagement data at scale.</p>
+    <p>But they don't solve the practitioner-side problem. Device data still needs clinical interpretation. Practitioners' workflows aren't supported. Consumer devices enable rehabilitation they don't create clinical infrastructure.</p>
+    <div class="tag-row">
+      <span class="tag tag-gray">Consumer-facing</span>
+      <span class="tag tag-gray">Patient engagement</span>
+      <span class="tag tag-amber">Limited practitioner integration</span>
+    </div>
+  </div>
+
+  <div class="competitor-card">
+    <h3>Hybrid Digital Care & Practitioner Enablement Platforms</h3>
+    <p>Companies like Origin, Hinge Health, and Kaia Health are building more integrated systems that combine practitioner networks, rehabilitation programming, outcome tracking, and digital care delivery. These are less direct competitors to Hey Lilie today and more indicators of where the market is heading.</p>
+    <p>Origin is worth noting specifically. Beyond rehabilitation services, they've invested in practitioner enablement through Origin University and Athena, an AI-supported clinical tool. Leading digital health companies are starting to invest in practitioner workflow infrastructure, not just patient-facing products.</p>
+    <div class="tag-row">
+      <span class="tag tag-purple">Practitioner enablement</span>
+      <span class="tag tag-purple">Outcome tracking</span>
+      <span class="tag tag-gray">Integrated care delivery</span>
+    </div>
+  </div>
+
+  <div class="competitor-card">
+    <h3>Traditional Training & Academic Institutions</h3>
+    <p>Universities, hospital programs, and bodies like the IPPP still matter for practitioner credentialing and clinical education. But their model focuses on knowledge transfer, not workflow integration or data infrastructure. Clinical knowledge accumulates in individual practitioners but is rarely systematized across a community.</p>
+    <div class="tag-row">
+      <span class="tag tag-gray">Established credibility</span>
+      <span class="tag tag-amber">Traditional delivery model</span>
+      <span class="tag tag-amber">Weak digital integration</span>
+    </div>
+  </div>
+
+  <h2>Where the Market Is Going</h2>
+  <p>A few shifts are reshaping the landscape. Connected devices and clinical care are converging. Evidence-based outcomes are becoming a baseline expectation, not a differentiator. In Europe, GDPR compliance and HDS-certified hosting are creating real barriers to entry but an advantage for those already operating within compliant frameworks. The broader market is moving from isolated wellness products toward integrated practitioner ecosystems where clinical data, workflow tools, and care delivery are linked.</p>
+
+  <h2>Hey Lilie's Position</h2>
+  <p>Hey Lilie sits in a specific space: closer to practitioners than consumer femtech, more agile than traditional academic institutions, and grounded in clinical education rather than service delivery. That means its authority comes from clinical credibility, not tech investment.</p>
+
+  <p>The opportunity is to become the trusted infrastructure layer through which pelvic health practitioners structure and build on their clinical knowledge. Whether that happens depends on converting practitioner trust already earned into structured data participation.</p>
+</div>
+
+<!-- 07 REGULATORY -->
+<div class="page">
+  <div class="section-label">07 · Regulatory Environment</div>
+  <h1>GDPR, Health Data, and What That Means in Practice</h1>
+
+  <p>Any clinical data collection initiative in France operates under a strict regulatory framework. This isn't a secondary concern it's a core design requirement for any data capture system in women's health.</p>
+
+  <h2>The Rules That Apply</h2>
+  <p>Pelvic health data symptom profiles, assessment scores, treatment records, outcome measurements is classified as a special category of personal data under Article 9 of the GDPR. That classification triggers significantly stricter obligations than standard data processing:</p>
+
+  <div class="finding">
+    <div class="finding-num">1</div>
+    <p><strong>Explicit, specific informed consent</strong> from patients before any collection or processing, with the right to withdraw at any time.</p>
+  </div>
+  <div class="finding">
+    <div class="finding-num">2</div>
+    <p><strong>Data minimization</strong> only data strictly necessary for the declared purpose can be collected. Collecting extra fields for potential future use, without a clearly defined purpose, isn't compliant.</p>
+  </div>
+  <div class="finding">
+    <div class="finding-num">3</div>
+    <p><strong>Pseudonymization and anonymization</strong> patient identifiers must be separated from clinical data, with robust controls preventing re-identification. Any aggregated dataset used for research must be fully anonymized.</p>
+  </div>
+  <div class="finding">
+    <div class="finding-num">4</div>
+    <p><strong>HDS-certified hosting</strong> French law requires health data processed by healthcare professionals to be hosted on certified (Hébergeur de Données de Santé) infrastructure. This applies to any cloud-based health data platform operating in France.</p>
+  </div>
+  <div class="finding">
+    <div class="finding-num">5</div>
+    <p><strong>Purpose specification</strong> the purpose of data collection must be clearly defined and communicated. Research, analytics, and commercial uses must each be specified separately. General consent to clinical care doesn't cover them.</p>
+  </div>
+
+  <h2>What This Means for Hey Lilie</h2>
+  <p>These requirements have direct design implications. They're also both a constraint and a potential edge: a privacy-by-design architecture one that builds consent, pseudonymization, and data minimization into the workflow from the start reduces regulatory risk while signaling to practitioners and patients that data is handled responsibly.</p>
+
+  <p>Trust here isn't just an ethical ambition. It's a practical prerequisite. Without it, practitioner participation and patient consent won't reach a scale that produces a useful dataset. Building trust and achieving regulatory compliance are fundamentally the same problem.</p>
+</div>
+
+<!-- 08 MVP -->
+<div class="page">
+  <div class="section-label">08 · Prototype Exploration</div>
+  <h1>MVP Concept: Workflow Design & Exploratory Insights</h1>
+
+  <div class="mvp-notice">
+    <div class="mvp-notice-icon">⚠</div>
+    <div><strong>Important framing:</strong> The prototype shown here is an exploratory proof-of-concept. It was built to visualize workflow assumptions and support strategic reasoning not to be deployed as a clinical product. No clinical validation or real-world testing has been done. All screens are labeled "MVP PROTOTYPE · NOT FOR CLINICAL USE."</div>
+  </div>
+
+  <p>To make the strategic analysis tangible, we built a functional prototype of a structured clinical data capture tool. It serves three purposes: it makes the proposed workflow concrete and discussable; it surfaces tensions between standardization and clinical flexibility; and it shows that the core concept is technically implementable.</p>
+
+  <p>The prototype follows a three-step consultation flow: consent and patient identification, clinical assessment, and a centralized analytics dashboard. Each module was designed around a specific hypothesis about how structured data capture should work in a clinical setting.</p>
+
+  <hr>
+
+  <!-- Screenshot 1 -->
+  <div class="screenshot-block">
+    <div class="screenshot-label">Module 1 · Privacy-First Onboarding & Consent</div>
+    <div class="screenshot-mock">
+      <div class="mock-header">
+        <span class="mock-logo">🌸 Hey Lilie</span>
+        <span class="mock-tag">CAPTURE DE DONNÉES CLINIQUES · PROTOTYPE MVP</span>
+        <span class="mock-badge">STEP 1 OF 3</span>
+      </div>
+      <div style="font-size:14px; color:#D4A8D4; font-weight:600; margin-bottom:8px;">Start a New Consultation</div>
+      <div style="font-size:12px; color:#888; margin-bottom:14px;">Complétez le consentement et l'identification avant de commencer.</div>
+      <div style="background:#2A1520; border:1px solid #6B3A6B; padding:10px 12px; border-radius:4px; font-size:11px; color:#C8A0C8; margin-bottom:12px;">
+        🔒 <strong>Data Protection Notice (GDPR)</strong><br>
+        This prototype collects anonymised clinical data only. No real names, dates of birth, or identifying information are stored. Data is saved locally and used solely for educational and research purposes within the Hey Lilie project. Patients may withdraw consent at any time.
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;font-size:12px;margin-bottom:14px;">
+        <span style="color:#9B6A9B;">☑</span> I confirm the patient has given informed consent for anonymised clinical data collection.
+      </div>
+      <div style="font-size:12px;color:#888;margin-bottom:6px;font-weight:600;">Patient Identifier</div>
+      <div style="font-size:11px;color:#666;margin-bottom:8px;">Use a non-identifying code e.g. HL-2024-001. Never enter the patient's real name.</div>
+      <div style="background:#1A1010;border:1px solid #444;border-radius:4px;height:32px;margin-bottom:14px;"></div>
+      <div style="display:flex;gap:10px;">
+        <span class="mock-btn">Start Consultation →</span>
+        <span style="background:#2A2020;color:#888;border:1px solid #444;padding:10px 16px;border-radius:6px;font-size:13px;">📊 View Dashboard</span>
+      </div>
+      <div style="text-align:center;margin-top:14px;font-size:10px;color:#555;letter-spacing:1px;">🌸 HEY LILIE CLINICAL DATA CAPTURE · MVP PROTOTYPE · NOT FOR CLINICAL USE</div>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <h4>Design Insight: Privacy Built In, Not Bolted On</h4>
+    <p>Consent collection is embedded directly in the consultation start flow not a separate admin step. Patients are tracked through anonymous identifiers only. This operationalizes privacy-by-design: compliance and trust are built into the experience, not added afterward.</p>
+    <ul class="obs-list">
+      <li>No personally identifiable patient data stored at any point</li>
+      <li>Informed consent confirmed before any data entry begins</li>
+      <li>Anonymized identifiers enable longitudinal tracking without re-identification risk</li>
+      <li>Data use purpose clearly communicated to both practitioner and patient</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <!-- Screenshot 2 -->
+  <div class="screenshot-block">
+    <div class="screenshot-label">Module 2A · Standardized Patient Profile</div>
+    <div class="screenshot-mock">
+      <div class="mock-header">
+        <span class="mock-logo">🌸 Hey Lilie</span>
+        <span class="mock-tag">CAPTURE DE DONNÉES CLINIQUES · PROTOTYPE MVP</span>
+        <span class="mock-badge">STEP 2 OF 3</span>
+      </div>
+      <div style="font-size:14px;color:#D4A8D4;font-weight:600;margin-bottom:4px;">Clinical Assessment <span style="font-weight:400;color:#888;font-size:12px;">Patient: TEST-002</span></div>
+      <div style="font-size:12px;color:#888;margin-bottom:16px;">Remplissez tous les champs et enregistrez la consultation.</div>
+      <div style="font-size:10px;letter-spacing:1.5px;color:#7B4A7B;font-weight:700;margin-bottom:10px;">A · PATIENT PROFILE</div>
+      <div class="mock-row">
+        <span class="mock-label">Age Group</span>
+        <select class="mock-select"><option>18–30</option><option>30–45</option><option>45–60</option><option>60+</option></select>
+      </div>
+      <div class="mock-row">
+        <span class="mock-label">Parity</span>
+        <select class="mock-select"><option>Nulliparous</option><option>1 child</option><option>2+ children</option></select>
+      </div>
+      <div class="mock-row">
+        <span class="mock-label">Referral pathway</span>
+        <select class="mock-select"><option>Self-referral</option><option>GP referral</option><option>Specialist referral</option></select>
+      </div>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <h4>Design Insight: Structure Without Extra Work</h4>
+    <p>Predefined dropdown categories replace free-text demographic fields. The structure is in the interface, not in practitioners' heads. This enforces consistency without adding cognitive load and makes the data immediately aggregable without cleaning.</p>
+    <ul class="obs-list">
+      <li>Predefined age bands, parity groups, and referral pathways cut documentation variability</li>
+      <li>Structured fields are directly aggregable no normalization needed</li>
+      <li>Reduces documentation time while improving data quality</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <!-- Screenshot 3 -->
+  <div class="screenshot-block">
+    <div class="screenshot-label">Module 2B · Symptom Classification & Clinical Assessment</div>
+    <div class="screenshot-mock">
+      <div style="font-size:10px;letter-spacing:1.5px;color:#7B4A7B;font-weight:700;margin-bottom:10px;">B · PRESENTING COMPLAINT</div>
+      <div class="mock-row">
+        <span class="mock-label">Main Symptom</span>
+        <select class="mock-select">
+          <option>Pelvic pain</option><option>Urinary incontinence</option><option>Prolapse</option>
+          <option>Postpartum recovery</option><option>Sexual pain</option><option>Cervical assessment</option>
+        </select>
+      </div>
+      <div style="margin-top:16px;font-size:10px;letter-spacing:1.5px;color:#7B4A7B;font-weight:700;margin-bottom:10px;">C · CLINICAL ASSESSMENT</div>
+      <div class="mock-row">
+        <span class="mock-label">Pain Level (0–10)</span>
+        <input type="range" min="0" max="10" value="3" style="flex:1;accent-color: var(--purple);">
+        <span style="color:#888;font-size:12px;">3/10</span>
+      </div>
+      <div class="mock-row" style="margin-top:12px;">
+        <span class="mock-label">Clinical Score</span>
+        <select class="mock-select"><option>Mild</option><option>Moderate</option><option>Severe</option></select>
+      </div>
+      <div class="mock-row">
+        <span class="mock-label">Treatment Type</span>
+        <select class="mock-select"><option>Pelvic floor exercises</option><option>Manual therapy</option><option>Education</option><option>Breathing techniques</option></select>
+      </div>
+      <div class="mock-row">
+        <span class="mock-label">Outcome</span>
+        <select class="mock-select"><option>Improved</option><option>Stable</option><option>Worse</option></select>
+      </div>
+      <div style="margin-top:14px;display:flex;gap:10px;">
+        <span class="mock-btn">💾 Save Consultation</span>
+        <span style="background:#2A2020;color:#888;border:1px solid #444;padding:10px 16px;border-radius:6px;font-size:13px;">+ New Patient</span>
+        <span style="background:#2A2020;color:#888;border:1px solid #444;padding:10px 16px;border-radius:6px;font-size:13px;">📊 Dashboard</span>
+      </div>
+      <div style="text-align:center;margin-top:14px;font-size:10px;color:#555;letter-spacing:1px;">🌸 HEY LILIE CLINICAL DATA CAPTURE · MVP PROTOTYPE · NOT FOR CLINICAL USE</div>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <h4>Design Insight: Turning Observations Into Comparable Data</h4>
+    <p>The assessment module puts symptom classification, pain measurement, severity scoring, treatment type, and session outcome in one form. Each field uses predefined categories, converting subjective clinical observations into structured, comparable data points usable for analysis across the whole practitioner network.</p>
+    <ul class="obs-list">
+      <li>Symptom categories aligned with recognized pelvic health conditions</li>
+      <li>Numerical pain capture enables longitudinal symptom tracking across sessions</li>
+      <li>Standardized severity classification enables cross-practitioner comparison</li>
+      <li>Treatment type categories support future outcome-treatment correlation</li>
+      <li>Outcome capture builds the foundation for session-level effectiveness measurement</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <!-- Dashboard -->
+  <div class="screenshot-block">
+    <div class="screenshot-label">Module 3 · Real-Time Clinical Dashboard</div>
+    <div class="dash-mock">
+      <div class="mock-header" style="margin-bottom:16px;">
+        <span class="mock-logo">🌸 Hey Lilie</span>
+        <span class="mock-tag">CLINICAL DASHBOARD · STEP 3 OF 3</span>
+      </div>
+      <div style="font-size:12px;color:#888;margin-bottom:14px;">Vue agrégée de toutes les consultations enregistrées</div>
+      <div class="dash-kpi">
+        <div class="kpi-box"><div class="kpi-num">3</div><div class="kpi-label">Total Consultations</div></div>
+        <div class="kpi-box"><div class="kpi-num">2.7</div><div class="kpi-label">Avg. Pain Score</div></div>
+        <div class="kpi-box"><div class="kpi-num">67%</div><div class="kpi-label">Improved After Session</div></div>
+      </div>
+      <div class="dash-charts">
+        <div class="chart-box">
+          <div class="chart-title">Symptom Distribution</div>
+          <div class="bar-row"><span class="bar-lbl">Pelvic pain</span><div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div><span class="bar-val">3</span></div>
+        </div>
+        <div class="chart-box">
+          <div class="chart-title">Outcome Distribution</div>
+          <div class="bar-row"><span class="bar-lbl">Improved</span><div class="bar-bg"><div class="bar-fill" style="width:66%"></div></div><span class="bar-val">2</span></div>
+          <div class="bar-row"><span class="bar-lbl">Stable</span><div class="bar-bg"><div class="bar-fill" style="width:33%"></div></div><span class="bar-val">1</span></div>
+        </div>
+        <div class="chart-box">
+          <div class="chart-title">Treatment Frequency</div>
+          <div class="bar-row"><span class="bar-lbl">Manual</span><div class="bar-bg"><div class="bar-fill" style="width:66%"></div></div><span class="bar-val">2</span></div>
+          <div class="bar-row"><span class="bar-lbl">Exercises</span><div class="bar-bg"><div class="bar-fill" style="width:33%"></div></div><span class="bar-val">1</span></div>
+        </div>
+        <div class="chart-box">
+          <div class="chart-title">Clinical Score Distribution</div>
+          <div class="bar-row"><span class="bar-lbl">Mild</span><div class="bar-bg"><div class="bar-fill" style="width:33%"></div></div><span class="bar-val">1</span></div>
+          <div class="bar-row"><span class="bar-lbl">Moderate</span><div class="bar-bg"><div class="bar-fill" style="width:66%"></div></div><span class="bar-val">2</span></div>
+        </div>
+      </div>
+      <div style="margin-top:14px;font-size:10px;color:#555;letter-spacing:1px;text-align:center;">🌸 HEY LILIE CLINICAL DATA CAPTURE · MVP PROTOTYPE · NOT FOR CLINICAL USE</div>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <h4>Design Insight: What Structured Data Makes Possible</h4>
+    <p>The dashboard shows what becomes possible when individual consultation records are structured consistently: aggregated metrics, symptom distributions, outcome analytics, treatment frequency patterns. At scale, this moves from a practice-level reporting tool to a network-level clinical intelligence platform. That's the strategic endpoint not a current reality, but a direction worth pursuing.</p>
+    <ul class="obs-list">
+      <li>Aggregated consultation metrics generate immediate operational visibility</li>
+      <li>Symptom and outcome distributions enable population-level pattern recognition</li>
+      <li>Structured datasets can be exported for external analysis or research use</li>
+      <li>Treatment frequency tracking supports evidence-based practice refinement</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 09 RECOMMENDATION -->
+<div class="page">
+  <div class="section-label">09 · Strategic Recommendation</div>
+  <h1>Strategic Recommendation</h1>
+
+  <p>The answer to our central question can Hey Lilie turn its practitioner base into a structured clinical data asset is conditional: yes, but the path there is primarily organizational and relational, not technical.</p>
+
+  <p>The technology needed to collect structured clinical data at the point of care is well understood. The regulatory framework is navigable. The practitioner network already exists. What doesn't exist yet is the governance architecture, the trust infrastructure, and the validated workflow integration that would make practitioners willing and able to participate.</p>
+
+  <div class="rec-block">
+    <h3>Core Recommendation: Trust First, Then Build</h3>
+    <p>Don't rush toward technical deployment. The immediate priority is building the conditions under which deployment could actually succeed starting with practitioner co-design, governance clarity, and a small pilot that generates validated learning, not premature scale.</p>
+    <p>Invest first in relationships, incentive structures, and governance frameworks. The technical build follows from getting those right.</p>
+  </div>
+
+  <h2>A Three-Horizon Roadmap</h2>
+
+  <div class="horizon-grid">
+    <div class="horizon-card">
+      <div class="h-label">Horizon 1 · Now</div>
+      <h3>Foundation: Co-design & Governance</h3>
+      <p>Engage 10–20 willing practitioners in a co-design process to validate the data model, workflow assumptions, and consent architecture. Get legal guidance on HDS-compliant hosting. Define what practitioners get out of participating.</p>
+    </div>
+    <div class="horizon-card">
+      <div class="h-label">Horizon 2 · 6–18 months</div>
+      <h3>Pilot: Validated Data Capture</h3>
+      <p>Deploy a minimal version with the co-design cohort. Measure adoption, friction, data quality, and practitioner satisfaction. Iterate on the data model and UX based on what you learn. Start building a dataset of usable quality.</p>
+    </div>
+    <div class="horizon-card">
+      <div class="h-label">Horizon 3 · 18+ months</div>
+      <h3>Scale: Clinical Data Platform</h3>
+      <p>Expand to the broader network. Build analytics on top of the structured dataset. Explore research partnerships and evidence-based insights. Evaluate EMR integration pathways and network effects.</p>
+    </div>
+  </div>
+
+  <h2>Conditions for Success</h2>
+
+  <table class="matrix">
+    <thead>
+      <tr>
+        <th>Condition</th>
+        <th>Why it matters</th>
+        <th>Risk if neglected</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Practitioner trust</strong></td>
+        <td>Practitioners are the data source. No willing participation = no dataset.</td>
+        <td>Low adoption, sparse data, reputational risk</td>
+      </tr>
+      <tr>
+        <td><strong>Clear value for practitioners</strong></td>
+        <td>Documentation burden is only accepted if practitioners get direct benefit better insights, peer benchmarking, clinical support.</td>
+        <td>Workflow friction leads to abandonment</td>
+      </tr>
+      <tr>
+        <td><strong>GDPR-compliant governance</strong></td>
+        <td>Health data processing needs a legal basis, consent management, and secure infrastructure from day one.</td>
+        <td>Regulatory exposure, loss of trust</td>
+      </tr>
+      <tr>
+        <td><strong>Validated data model</strong></td>
+        <td>A schema that doesn't reflect real clinical practice produces low-quality or meaningless data.</td>
+        <td>Dataset can't support analytics; strategic value is lost</td>
+      </tr>
+      <tr>
+        <td><strong>Minimal workflow friction</strong></td>
+        <td>Any tool that meaningfully extends documentation time will be dropped, regardless of quality.</td>
+        <td>Adoption failure</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Traps to Avoid</h2>
+  <p>A few failure modes worth naming explicitly: building for a large network before validating with a small one; letting technology lead instead of practitioner insights; treating GDPR as a legal checkbox instead of a trust-building tool; and assuming that because the data opportunity is real, practitioners will naturally want to participate. Adoption has to be earned.</p>
+</div>
+
+<!-- 10 CONCLUSION -->
+<div class="page">
+  <div class="section-label">10 · Conclusion</div>
+  <h1>Conclusion</h1>
+
+  <p>The question at the center of this project reflects a real strategic choice for Hey Lilie. Based on what we've analyzed, the opportunity is genuine, the timing is favorable, and the risks are manageable but the path is more demanding than a technical build alone.</p>
+
+  <p>Women's pelvic health in France has a training gap, a care consistency gap, and a data gap. Hey Lilie has already made a meaningful dent in the training gap. The next question is whether it can address the data gap and in doing so, shift from being a training provider to becoming foundational infrastructure for how pelvic health practitioners capture and build on clinical knowledge.</p>
+
+  <p>The competitive landscape supports this direction. Leading digital health companies are converging toward practitioner ecosystem models that link structured clinical data, workflow tools, and care delivery. Hey Lilie has something most of them don't: existing proximity to practitioners and earned clinical credibility. That's a real asset but one that can only be leveraged through a relationship-first approach.</p>
+
+  <p>The regulatory environment is complex but workable. GDPR compliance, HDS-certified hosting, and privacy-by-design aren't obstacles they're the constraints within which this has to be built. Companies that internalize these early will be better positioned than those who try to retrofit compliance later.</p>
+
+  <p>The prototype built as part of this project demonstrates the core workflow concept holds together: consent can be embedded into consultation onboarding, structured capture can be designed to minimize additional burden, and even a small volume of structured records produces meaningful aggregated insights. These are proof-of-concept demonstrations, not a deployable product. But they give the next phase of work a concrete foundation to build on.</p>
+
+  <p>How successful this transition is will depend less on technology than on three things: the trust Hey Lilie builds with its practitioner community, the governance architecture it puts in place before scaling, and how clearly it articulates why participating is worth it for practitioners. Get those three right, and the strategic opportunity is genuinely significant.</p>
+
+  <div class="pull-quote">"The most valuable thing Hey Lilie could build isn't a database. It's a practitioner community that trusts it enough to share clinical knowledge at scale."</div>
+
+  <p>This report is a starting point, not a conclusion. The work of co-designing the data model, validating workflow integration, building governance, and earning practitioner participation all lies ahead. We hope this analysis gives a useful foundation for that work and a clear-eyed view of both the opportunity and what's needed to realize it.</p>
+</div>
+
+<!-- 11 GLOSSARY -->
+<div class="page">
+  <div class="section-label">11 · Glossary</div>
+  <h1>Glossary</h1>
+
+  <div class="glossary-entry">
+    <div class="gloss-term">Clinical workflow</div>
+    <div class="gloss-def">The sequence of steps a practitioner follows during patient assessment, treatment, and documentation within a consultation. Here, this refers specifically to pelvic health consultations by physiotherapists and midwives.</div>
+  </div>
+  <div class="glossary-entry">
+    <div class="gloss-term">Data governance</div>
+    <div class="gloss-def">The policies, processes, roles, and standards that govern how data is collected, stored, used, and shared. In clinical data, governance also covers consent management, access control, and ethical oversight.</div>
+  </div>
+  <div class="glossary-entry">
+    <div class="gloss-term">EBM</div>
+    <div class="gloss-def">Evidence-Based Medicine. A clinical approach that integrates the best available research with individual clinical expertise and patient values to guide treatment decisions. All Hey Lilie training is grounded in EBM.</div>
+  </div>
+  <div class="glossary-entry">
+    <div class="gloss-term">EMR</div>
+    <div class="gloss-def">Electronic Medical Record. A digital system for recording and managing patient health information. EMRs vary significantly across settings and are rarely interoperable with external platforms without specific integration work.</div>
+  </div>
+  <div class="glossary-entry">
+    <div class="gloss-term">GDPR</div>
+    <div class="gloss-def">General Data Protection Regulation (EU Regulation 2016/679). The EU's primary data protection law, in force since 2018. It sets strict requirements for personal data processing with particularly strict obligations for health data.</div>
+  </div>
+  <div class="glossary-entry">
+    <div class="gloss-term">HDS</div>
+    <div class="gloss-def">Hébergeur de Données de Santé. French certification for personal health data hosting providers. Required for any cloud-based health data platform in France.</div>
+  </div>
+  <div class="glossary-entry">
+    <div class="gloss-term">ICIQ-UI-SF</div>
+    <div class="gloss-def">International Consultation on Incontinence Questionnaire Urinary Incontinence Short Form. A validated patient-reported measure assessing the severity and quality-of-life impact of urinary incontinence. Widely used in pelvic floor physiotherapy.</div>
+  </div>
+  <div class="glossary-entry">
+    <div class="gloss-term">Interoperability</div>
+    <div class="gloss-def">The ability of different systems to connect, exchange data, and use that data. In digital health, this typically means the capacity of a clinical tool to communicate with EMRs or national health platforms.</div>
+  </div>
+  <div class="glossary-entry">
+    <div class="gloss-term">Longitudinal tracking</div>
+    <div class="gloss-def">Systematic data collection on the same patient over time, enabling analysis of change and long-term outcomes. Longitudinal clinical data is significantly more valuable for research than single-session records.</div>
+  </div>
+  <div class="glossary-entry">
+    <div class="gloss-term">MVP</div>
+    <div class="gloss-def">Minimum Viable Product. The simplest version of a product that allows a team to collect validated learning with minimum effort. Here, the MVP refers to an exploratory conceptual prototype testing workflow assumptions not a deployed or clinically validated product.</div>
+  </div>
+  <div class="glossary-entry">
+    <div class="gloss-term">Oxford Scale</div>
+    <div class="gloss-def">A clinical grading system for pelvic floor muscle strength through vaginal palpation, scored 0 (no contraction) to 5 (strong contraction against resistance). Widely used in pelvic floor physiotherapy.</div>
+  </div>
+  <div class="glossary-entry">
+    <div class="gloss-term">PERFECT Score</div>
+    <div class="gloss-def">A pelvic floor physiotherapy assessment framework covering Power, Endurance, Repetitions, Fast contractions, Every contraction timed, and Co-contraction. Gives a fuller functional picture than a single strength score.</div>
+  </div>
+  <div class="glossary-entry">
+    <div class="gloss-term">POP-Q</div>
+    <div class="gloss-def">Pelvic Organ Prolapse Quantification. A standardized ICS system for objectively describing and staging pelvic organ prolapse. Provides a reproducible framework for assessing vaginal wall and uterine descent.</div>
+  </div>
+  <div class="glossary-entry">
+    <div class="gloss-term">Privacy by design</div>
+    <div class="gloss-def">A design approach where privacy and data protection are built in from the start not added later. Here, this means embedding consent, anonymization, and data minimization directly into the clinical data capture workflow.</div>
+  </div>
+  <div class="glossary-entry">
+    <div class="gloss-term">Structured clinical data</div>
+    <div class="gloss-def">Clinical information recorded in a predefined, machine-readable format using standardized fields or classifications. Structured data is directly aggregable and reusable unlike free-text notes or scanned documents.</div>
+  </div>
+</div>
+
+<!-- 12 REFERENCES -->
+<div class="page">
+  <div class="section-label">12 · References</div>
+  <h1>References</h1>
+
+  <div class="ref-item"><span class="ref-num">[1]</span>European Parliament and Council. <em>Regulation (EU) 2016/679 (General Data Protection Regulation).</em> Official Journal of the European Union, L 119, 4 May 2016. <a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" style="color:var(--purple);">eur-lex.europa.eu</a></div>
+  <div class="ref-item"><span class="ref-num">[2]</span>Commission Nationale de l'Informatique et des Libertés (CNIL). <em>Référentiel sur le traitement de données à caractère personnel dans le cadre du soin.</em> CNIL, Paris. <a href="https://www.cnil.fr" style="color:var(--purple);">cnil.fr</a></div>
+  <div class="ref-item"><span class="ref-num">[3]</span>Ministère de la Santé et de la Prévention. <em>Hébergement des données de santé Certification HDS.</em> Agence du Numérique en Santé (ANS). <a href="https://esante.gouv.fr" style="color:var(--purple);">esante.gouv.fr</a></div>
+  <div class="ref-item"><span class="ref-num">[4]</span>Avery K, Donovan J, Peters T, Shaw C, Gotoh M, Abrams P. <em>ICIQ: a brief and robust measure for evaluating the symptoms and impact of urinary incontinence.</em> Neurourology and Urodynamics, 2004; 23(4): 322–330.</div>
+  <div class="ref-item"><span class="ref-num">[5]</span>Laycock J, Jerwood D. <em>Pelvic floor muscle assessment: the PERFECT scheme.</em> Physiotherapy, 2001; 87(12): 631–642.</div>
+  <div class="ref-item"><span class="ref-num">[6]</span>Bump RC, Mattiasson A, Bø K, et al. <em>The standardization of terminology of female pelvic organ prolapse and pelvic floor dysfunction.</em> American Journal of Obstetrics and Gynecology, 1996; 175(1): 10–17.</div>
+  <div class="ref-item"><span class="ref-num">[7]</span>Bo K, Berghmans B, Morkved S, Van Kampen M (eds.). <em>Evidence-Based Physical Therapy for the Pelvic Floor.</em> 2nd ed. Elsevier, 2015.</div>
+  <div class="ref-item"><span class="ref-num">[8]</span>Hey Lilie. <em>Company Overview and Training Programs.</em> <a href="https://www.heylilie.com" style="color:var(--purple);">heylilie.com</a></div>
+  <div class="ref-item"><span class="ref-num">[9]</span>Qualiopi. <em>Certification nationale qualité pour les prestataires de formation.</em> France Compétences. <a href="https://www.qualiopi.fr" style="color:var(--purple);">qualiopi.fr</a></div>
+  <div class="ref-item"><span class="ref-num">[10]</span>Périfit. <em>Pelvic Floor Trainer Product Overview.</em> <a href="https://www.perifit.co" style="color:var(--purple);">perifit.co</a></div>
+  <div class="ref-item"><span class="ref-num">[11]</span>Elvie. <em>Elvie Trainer Connected Pelvic Floor Trainer.</em> <a href="https://www.elvie.com" style="color:var(--purple);">elvie.com</a></div>
+  <div class="ref-item"><span class="ref-num">[12]</span>Origin (Pelvic Health). <em>Practitioner Enablement and Clinical Services.</em> <a href="https://www.theoriginway.com" style="color:var(--purple);">theoriginway.com</a></div>
+  <div class="ref-item"><span class="ref-num">[13]</span>Hinge Health. <em>Digital Musculoskeletal Clinic Clinical Outcomes.</em> <a href="https://www.hingehealth.com" style="color:var(--purple);">hingehealth.com</a></div>
+
+  <hr>
+  <p style="font-size:12px; color:var(--text-muted); text-align:center; margin-top:32px;">
+    This report was prepared for emlyon business school as part of the ICP program, Academic Year 2025–2026.<br>
+    It is an academic deliverable. The exploratory prototype described herein is not a clinically validated or deployed product.<br>
+    All strategic analysis is based on publicly available information and secondary research conducted within the project timeline.
+  </p>
+</div>
+
+</body>
+</html>
+
+
